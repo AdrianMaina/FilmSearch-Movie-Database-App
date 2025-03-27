@@ -1,4 +1,5 @@
 /* General Styles */
+/* General Styles */
 body {
     background-image: url("https://img.freepik.com/free-photo/assortment-cinema-elements-red-background-with-copy-space_23-2148457848.jpg");
     background-repeat: no-repeat;
@@ -7,6 +8,7 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: 'Arial', sans-serif;
+    color: white;
 }
 
 /* Header */
@@ -17,6 +19,7 @@ body {
     padding: 2rem;
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Search Area */
@@ -26,13 +29,15 @@ body {
     max-width: 800px;
     margin: 0 auto;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 .search-container {
     display: flex;
     gap: 1rem;
     margin-bottom: 2rem;
+    justify-content: center;
 }
 
 #search-input {
@@ -41,42 +46,131 @@ body {
     font-size: 1.2rem;
     border: 2px solid #fff;
     border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+#search-input::placeholder {
+    color: #bbb;
 }
 
 #search-button {
     width: 30%;
     padding: 0.8rem;
-    background-color: #fff;
+    background-color: white;
     color: maroon;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 #search-button:hover {
     background-color: #ffd7d7;
+    transform: scale(1.05);
 }
 
-/* Results */
+#search-button:active {
+    transform: scale(0.95);
+}
+
+/* Search Results */
 #search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
     padding: 1rem;
-    color: white;
 }
 
+/* Movie Cards */
 .movie-card {
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 1rem;
     border-radius: 10px;
-    margin-bottom: 1rem;
+    width: 250px;
+    text-align: center;
     color: maroon;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
 }
 
 .movie-card img {
-    max-width: 300px;
+    max-width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 1rem;
     display: block;
+}
+
+/* Add to Watchlist Button */
+.watchlist-btn {
+    background-color: maroon;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.watchlist-btn:hover {
+    background-color: #990000;
+    transform: scale(1.05);
+}
+
+.watchlist-btn:active {
+    transform: scale(0.95);
+}
+
+/* Watchlist Page Link Button */
+.watchlist-button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    background-color: #ffcc00; /* Gold for contrast */
+    color: maroon;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.watchlist-button:hover {
+    background-color: #ffdb4d;
+    transform: scale(1.1);
+}
+
+.watchlist-button:active {
+    transform: scale(0.95);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #search-input,
+    #search-button {
+        width: 100%;
+    }
+
+    .movie-card {
+        width: 90%;
+    }
 }
