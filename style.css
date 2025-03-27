@@ -1,0 +1,82 @@
+/* General Styles */
+body {
+    background-image: url("https://img.freepik.com/free-photo/assortment-cinema-elements-red-background-with-copy-space_23-2148457848.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+.head {
+    text-align: center;
+    background-color: maroon;
+    color: white;
+    padding: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Search Area */
+.SearchArea {
+    background-color: rgba(128, 0, 0, 0.9);
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.search-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#search-input {
+    width: 70%;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+#search-button {
+    width: 30%;
+    padding: 0.8rem;
+    background-color: #fff;
+    color: maroon;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#search-button:hover {
+    background-color: #ffd7d7;
+}
+
+/* Results */
+#search-results {
+    padding: 1rem;
+    color: white;
+}
+
+.movie-card {
+    background-color: rgba(255,255,255,0.9);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    color: maroon;
+}
+
+.movie-card img {
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    display: block;
+}
